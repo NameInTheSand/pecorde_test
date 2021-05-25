@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="activity"
+            type="com.example.pecodetest.MainActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/my_vp2"
+            android:layout_width="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="29dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/round_tv"
+            android:fontFamily="@font/roboto"
+            android:paddingVertical="11dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="1000" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/minus_btn"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/round_btn"
+            android:fontFamily="@font/roboto"
+            android:text="@string/minus"
+            android:textColor="@color/text_btn"
+            android:textSize="20sp"
+
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/counter"
+            app:layout_constraintStart_toStartOf="@+id/counter"
+            app:layout_constraintTop_toTopOf="@id/counter" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/plus_btn"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/round_btn"
+            android:fontFamily="@font/roboto"
+            android:text="@string/plus"
+            android:textColor="@color/text_btn"
+            android:textSize="20sp"
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/counter"
+            app:layout_constraintEnd_toEndOf="@+id/counter"
+            app:layout_constraintTop_toTopOf="@id/counter" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
