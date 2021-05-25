@@ -1,6 +1,7 @@
 package com.example.pecodetest
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
@@ -41,6 +42,10 @@ class MainActivity : AppCompatActivity() {
                 super.onPageSelected(position)
                 val newCounter = binding.myVp2.currentItem +1
                 binding.counter.text = newCounter.toString()
+                if(newCounter==1){
+                    binding.minusBtn.visibility= View.GONE
+                }
+                else  binding.minusBtn.visibility= View.VISIBLE
             }
         })
     }
