@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "171817069678",
+    "project_id": "pecorde-c44da",
+    "storage_bucket": "pecorde-c44da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171817069678:android:907faea7113b5b587a8a7f",
+        "android_client_info": {
+          "package_name": "com.example.pecodetest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171817069678-plcveshub3lfci41v4jemuref8pcreqt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDc7SXLE74CkkCoN63NAB631k_6YS6rl-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171817069678-plcveshub3lfci41v4jemuref8pcreqt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
