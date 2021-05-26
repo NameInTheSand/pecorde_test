@@ -10,23 +10,20 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Build
-import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import com.example.pecodetest.MainActivity
 import com.example.pecodetest.R
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import kotlin.random.Random
 
 private const val CHANNEL_ID = "my_channel"
 
 @SuppressLint("MissingFirebaseInstanceTokenRefresh")
 class FirebaseService : FirebaseMessagingService() {
-    private  var notificationID:Int = 0
+    private var notificationID: Int = 0
     override fun onMessageReceived(message: RemoteMessage) {
         super.onMessageReceived(message)
-
         val intent = Intent(this, MainActivity::class.java)
         val notificationManager =
             getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -37,9 +34,9 @@ class FirebaseService : FirebaseMessagingService() {
         for (i in 1..100) {
             if (message.data["message"]?.contains("$i") == true) {
                 notificationID = i
+                intent.putExtra("ID", notificationID)
             }
         }
-        intent.putExtra("ID",notificationID)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         val pendingIntent = PendingIntent.getActivity(this, 0, intent, FLAG_ONE_SHOT)
         val notification = NotificationCompat.Builder(this, CHANNEL_ID)
